@@ -50,7 +50,7 @@ jobs:
       - name: Checkout Helm chart
         uses: actions/checkout@v4
         with:
-          repository: ${{ env.Ransomdvictor/Helmchart-Project }}
+          repository: ${{ env.HELM_REPO }}
           token: ${{ secrets.HELM_REPO_PAT }}
           path: helm-chart
 
