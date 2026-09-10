@@ -8,7 +8,7 @@ on:
       - stage
 
 env:
-  NODE_VERSION: 22.x
+  NODE_VERSION: 14.x
   IMAGE_NAME: devictor17/gym-web
   HELM_REPO: Ransomdvictor/Helmchart-Project
 
