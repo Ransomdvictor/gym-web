@@ -1,12 +1,13 @@
+```json
 {
   "name": "MFitness",
   "version": "1.0.0",
-  "description": "MFitness reponsive webite build using HTML5, CSS3 and Javascript. The complete layout of the page is build using grid layout and flexbox with some cool animations.",
+  "description": "MFitness responsive website built using HTML5, CSS3 and JavaScript. The complete layout of the page is built using grid layout and flexbox with some cool animations.",
   "main": "index.html",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "prefix:css": "postcss --use autoprefixer -b 'last 5 versions' css/style.css -o css/style.css",
-    "parcel": "parcel build index.html -d dist",
+    "prefix:css": "postcss --use autoprefixer -b \"last 5 versions\" css/style.css -o css/style.css",
+    "parcel": "parcel build index.html --dist-dir dist",
     "build": "npm run prefix:css && npm run parcel",
     "dev": "parcel index.html"
   },
@@ -25,3 +26,4 @@
     "leaflet": "^1.7.1"
   }
 }
+```
