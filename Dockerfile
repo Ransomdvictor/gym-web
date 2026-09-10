@@ -1,4 +1,4 @@
-# FROM node:20.20.2-bookworm 
+# FROM node:14.17.6-alpine3.15 as build
 
 # WORKDIR /app
 
@@ -29,7 +29,7 @@
 # CMD ["nginx", "-g", "daemon off;"]
 
 
-FROM node:20.20.2-bookworm
+FROM node:14.17.6-alpine3.15 as build
 WORKDIR /app
 RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
 COPY package*.json ./
