@@ -1,6 +1,6 @@
 name: gym-web CI
 
-on:FROM node:14.17.6-alpine3.15 as build
+on:
   push:
     branches:
       - main
@@ -8,7 +8,7 @@ on:FROM node:14.17.6-alpine3.15 as build
       - stage
 
 env:
-  NODE_VERSION: 14.17.6
+  NODE_VERSION: 14.x
   IMAGE_NAME: devictor17/gym-web
   HELM_REPO: Ransomdvictor/Helmchart-Project
 
@@ -65,7 +65,7 @@ jobs:
           push: true
           tags: |
             ${{ env.IMAGE_NAME }}:latest
-            ${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.image_tag }}
+            ${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.image_tag }} 
 
 
   # ==============================
