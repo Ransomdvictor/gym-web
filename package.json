@@ -1,11 +1,10 @@
 {
-  "name": "MFitness",
+  "name": "mfitness",
   "version": "1.0.0",
-  "description": "MFitness responsive website built using HTML5, CSS3 and JavaScript. The complete layout of the page is built using grid layout and flexbox with some cool animations.",
-  "main": "index.html",
+  "description": "MFitness responsive website built using HTML5, CSS3 and JavaScript.",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "prefix:css": "postcss --use autoprefixer -b \"last 5 versions\" css/style.css -o css/style.css",
+    "watch:sass": "sass sass/main.scss css/style.css --watch",
+    "prefix:css": "postcss css/style.css --use autoprefixer -o css/style.css",
     "parcel": "parcel build index.html --dist-dir dist",
     "build": "npm run prefix:css && npm run parcel",
     "dev": "parcel index.html"
@@ -13,15 +12,14 @@
   "author": "Manoranjan",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "node-sass": "^5.0.0",
-    "parcel": "^2.0.0-beta.2",
-    "parcel-bundler": "^1.12.5",
-    "postcss": "^8.2.14",
-    "postcss-cli": "^8.3.1"
+    "autoprefixer": "^10.4.21",
+    "parcel": "^2.16.4",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.92.1"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "leaflet": "^1.7.1"
+    "leaflet": "^1.9.4"
   }
 }
