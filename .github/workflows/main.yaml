@@ -68,7 +68,7 @@ jobs:
           NEW_TAG: ${{ needs.docker.outputs.image_tag }}
         run: | 
           CHART_VALUES_FILE="" 
-          for candidate in values.yaml gym-web/values.yaml chart/values.yaml; do
+          for candidate in values.yaml portfolio/values.yaml chart/values.yaml; do
             if [ -f "$candidate" ]; then
               CHART_VALUES_FILE="$candidate"
               break
